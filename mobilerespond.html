@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+Thank you for sharing your location
+
+<script>
+ navigator.geolocation.getCurrentPosition(function(position) {  
+  var gps = (position.coords.latitude+";"+position.coords.longitude);
+  
+  localStorage.setItem("gps", position.coords.latitude+" ,"+position.coords.longitude)
+  
+  localStorage.setItem("lat", position.coords.latitude)
+  localStorage.setItem("lon", position.coords.longitude)
+  
+  
+  
+  //window.GlobalVar = gps;
+  alert (gps);
+});
+</script>
+	
+</html>
